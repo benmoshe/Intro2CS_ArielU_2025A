@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class MySet2<T> {
     private ArrayList<T> _set;
     public MySet2() {
-        _set = new ArrayList<>();
+        _set = new ArrayList<T>();
     }
     public boolean add(T t) {
         boolean b = false;
