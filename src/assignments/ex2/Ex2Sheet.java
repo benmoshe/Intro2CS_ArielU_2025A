@@ -11,7 +11,7 @@ public class Ex2Sheet implements Sheet {
         table = new SCell[x][y];
         for(int i=0;i<x;i=i+1) {
             for(int j=0;j<y;j=j+1) {
-                table[i][j] = new SCell("");
+                table[i][j] = new SCell(Ex2Utils.EMPTY_CELL);
             }
         }
         eval();
