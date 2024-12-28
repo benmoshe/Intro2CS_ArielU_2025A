@@ -1,7 +1,5 @@
 package classes.week8;
-
 import classes.week6.Point2D;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
