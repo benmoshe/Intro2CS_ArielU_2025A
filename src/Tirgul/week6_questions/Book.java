@@ -66,10 +66,17 @@ public class Book {
     }
 
 
+//      public Book setPrice(int price){
+//          this.price = price;
+//          return this;
+//      }
+
+
     public static void main(String[] args) {
         Book book1 = new Book("Harry Potter", "J.K Rowling", 361, 75);
         book1.setPrice(100);
         book1.addOnePage();
+//        book1.setPrice(100).addOnePage();
         System.out.println("Price: " + book1.getPrice());
         System.out.println("Title: " + book1.getTitle());
         System.out.println("Author: " + book1.getAuthor());
