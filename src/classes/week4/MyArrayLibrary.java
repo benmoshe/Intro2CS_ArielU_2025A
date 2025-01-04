@@ -23,12 +23,20 @@ public class MyArrayLibrary {
 		int[]arr = new int[size];
 		++max;
 		for(int i=0; i<size; i=i+1) {
-			double dx = max-min;
-			double t = Math.random()*dx; // [0,max-min)
-			t= t + min; // [min,max)
+			//double dx = max-min;
+			//double t = Math.random()*dx; // [0,max-min)
+			//t= t + min; // [min,max)
+			double t = randomDouble(min, max);
 			arr[i] = (int)t;
 		}
 		return arr;
+	}
+	public static double randomDouble(double min, double max) {
+		double ans = Math.random(); // [0,1)
+		double dx = max-min;
+		ans = ans * dx; // [0,dx) == [0,max-min)
+		ans += min; // [min. dx+min) = [min, max)
+		return ans;
 	}
 	
 	public static void printArray(int[] arr){
@@ -56,8 +64,10 @@ public class MyArrayLibrary {
 		++b;
 		for(int i=0; i<rows; i=i+1)
 		{
-			for (int j = 0; j < mat[0].length; j++)
-				mat[i][j] = (int)(Math.random()*(b-a)) + a;
+			int[] arr = randomIntArray(cols, a,b);
+			mat[i] = arr;
+		//	for (int j = 0; j < mat[0].length; j++)
+		//		mat[i][j] = (int)(Math.random()*(b-a)) + a;
 		}
 		return mat;
 	}
@@ -99,9 +109,11 @@ public class MyArrayLibrary {
 	}
 
 	/**
+	 * This static function finds the index of the smallest entry with in [start, arr.length)
 	 * Example:
-	 * arr = {4,2,6,1,0,9}
-	 * minInd = 2;
+	 * arr = {4,-2,6,1,0,9}
+	 * start = 2
+	 * minInd = 4;
 	 * @param arr
 	 * @param start
 	 * @return

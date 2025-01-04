@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class StringFunctions {
 	public static void main(String[] a) {
 		String t = "12321";
-		boolean v = isSimetric(t);
+		boolean v = isSymmetric(t);
 		String s = "12345";
 		String rev_s = reverse(s);
 		String rev2_s = reverse(rev_s);
@@ -32,7 +32,7 @@ public class StringFunctions {
 	 * 2-((4*2)*(4*2))
 	 * 
 	 */
-	public static boolean isSimetric(String s) {
+	public static boolean isSymmetric(String s) {
 		boolean ans = false;
 		String t = reverse(s);
 		//boolean r = (t==s);  // Huge BUG!!

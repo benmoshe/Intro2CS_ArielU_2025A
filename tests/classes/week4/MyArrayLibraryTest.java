@@ -57,7 +57,7 @@ class MyArrayLibraryTest {
 		double ave = MyArrayLibrary.average(arr1);
 		double exp_ave = max_value/2.0;
 		double err = Math.abs(exp_ave - ave);
-		assertEquals(exp_ave, ave, max_value/10.0);
+		assertEquals(exp_ave, ave, 1);
 		// if(err>max_value/10.0) {
 			// fail("Wrong average");}
 	}
@@ -120,6 +120,7 @@ class MyArrayLibraryTest {
 				if(a[i]>a[i+1]) {ans = false;}
 			}
 		}
+		String a1 = "123";
 		return ans;
 	}
 }

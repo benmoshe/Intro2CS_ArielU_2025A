@@ -140,14 +140,16 @@ public class Sort {
 			mergeSort(tmp);
 			for(int i=0;i<len;i=i+1) {a[i] = (int)tmp[i];}
 		}
+
+
 		public static void mergeSort(double[] a) {
 			int size = a.length;
 			if(size>=2) {
 				int mid = size/2;
 				double[] left = getSubArray(a,0,mid);
 				double[] right = getSubArray(a,mid,size);
-				mergeSort(left); // recursive call
-				mergeSort(right); // recursive call
+				mergeSort(left); // recursive call {1,6};
+				mergeSort(right); // recursive call {3,4,7}
 				double[] merge = mergeArrays(left,right);
 				for(int i=0;i<merge.length;i=i+1) {
 					a[i] = merge[i];
@@ -242,7 +244,6 @@ public class Sort {
 			System.out.println("I didn't find it");
 		}
 	}
-	
 	
 	public static int binarySearch(int[] arr, int item, int left, int right) {
 		if(left>right)

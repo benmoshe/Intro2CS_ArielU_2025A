@@ -9,11 +9,11 @@ package classes.week4;
  */
 public class StdDrawTest {
 	public static void main(String[] a) {
-	//	testSimpleGUI();
-	//	testClip();
-	//	testDrawGraphs();
-		int[][] mat = {{1,1,1,1,1}, {1,0,1,0,1}, {1,0,0,0,1},  {1,0,1,0,1},  {1,1,1,1,1}, {1,0,1,0,1}};
-		drawMat(mat);
+//		testSimpleGUI();
+		testClip();
+//		testDrawGraphs();
+//		int[][] mat = {{1,1,1,1,1}, {1,0,1,0,1}, {1,0,0,0,1},  {1,0,1,0,1},  {1,1,1,1,1}, {1,0,1,0,1}};
+//		drawMat(mat);
 
 	}
 
@@ -58,7 +58,7 @@ public class StdDrawTest {
 		  StdDraw.clear();
 	}
 	public static void testClip() {
-		StdDraw.setScale(-2, +2);
+		StdDraw.setScale(-6, +6);
 		StdDraw.enableDoubleBuffering();
 		for (double t = 0.0; t<2*Math.PI; t += 0.02) {
 			double x = Math.sin(t);

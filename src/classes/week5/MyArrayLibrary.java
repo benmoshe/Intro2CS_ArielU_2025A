@@ -54,11 +54,12 @@ public class MyArrayLibrary {
 	}
 	
 	public static boolean isSortedAscending(int[] arr){
-		for (int i = 1; i < arr.length; i++) {
+		boolean ans = true;
+		for (int i = 1; i < arr.length  && ans; i++) {
 			if (arr[i-1] > arr[i]) {
-				return false; }
+				ans = false; }
 		}
-		return true;
+		return ans;
 	}
 	public static boolean isSortedDescending(int[] arr){
 		for (int i = 1; i < arr.length; i++) {
@@ -81,6 +82,40 @@ public class MyArrayLibrary {
 			if (arr[i-1] < arr[i]) {
 				ans = false;}
 		}
+		return ans;
+	}
+	public static int[] copy(int[] arr) {
+		int size = arr.length;
+		int[] ans = new int[size];
+		for(int i=0;i<size;i=i+1) {ans[i] = arr[i];}
+		return ans;
+	}
+	public static int[] shuffle (int[] arr) {
+		int size = arr.length;
+		int[] ans = copy(arr);
+		for(int i=0;i<size;i=i+1) {
+			int i2 = random(i,size);
+			swap(ans,i,i2);
+		}
+		return ans;
+	}
+
+	private static void swap(int[] ans, int i, int i2) {
+		int t = ans[i];
+		ans[i] = ans[i2];
+		ans[i2] = t;
+	}
+
+	/**
+	 * Compute a random integer in range [min, max)
+	 * @param min
+	 * @param max
+	 * @return
+	 */
+	private static int random(int min, int max) {
+		int dx = max-min;
+		int ans = (int)(Math.random()*dx);
+		ans += min;
 		return ans;
 	}
 }

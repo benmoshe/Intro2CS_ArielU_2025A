@@ -11,13 +11,13 @@ class StringFunctionsTest {
 		String[] sim = {"", "2", "121", "2332"};
 		String[] not_sim = {"12", "2212", "1121", "112332"};
 		for(int i=0;i<sim.length;i=i+1) {
-			boolean b = StringFunctions.isSimetric(sim[i]);
+			boolean b = StringFunctions.isSymmetric(sim[i]);
 			if(b==false) {
 				fail("ERR: "+sim[i]+" should be simetric");
 			}
 		}
 		for(int i=0;i<not_sim.length;i=i+1) {
-			boolean b = StringFunctions.isSimetric(not_sim[i]);
+			boolean b = StringFunctions.isSymmetric(not_sim[i]);
 			if(b==true) {
 				fail("ERR: "+not_sim[i]+" should be simetric");
 			}

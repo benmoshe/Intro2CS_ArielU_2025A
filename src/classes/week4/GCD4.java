@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class GCD4 {
 	public static boolean debug_flag = false;
 	public static void main(String[] args) {
+	//	double[] a = {0.1,1.3,-2};
+	//	sort(a);
+	//	System.out.println(e[1]); //3
+	//	System.out.println(r); // 3
 		// create a scanner so we can read the command-line input
 		Scanner scanner = new Scanner(System.in);
 		int flag = 4;
@@ -40,6 +44,11 @@ public class GCD4 {
 		}
 		System.out.println("Bye Bye...");
 	}
+
+	public static void sort(double[] a) {
+
+	}
+
 	/**
 	 * This is an inefficient implementation of GCD algorithm, simple search.
 	 * @param x
@@ -58,6 +67,17 @@ public class GCD4 {
 			}
 			n = n + 1;
 		}
+		return ans;
+	}
+
+	public static int max(int a, int b, int c)  {
+		int ans = a;
+		ans = max(max(a,b),c);
+		 return ans;
+	}
+	public static int max(int a, int b)  {
+		int ans = a;
+		if(b>a) {ans = b;}
 		return ans;
 	}
 	/**

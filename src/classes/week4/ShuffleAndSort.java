@@ -34,7 +34,7 @@ public class ShuffleAndSort {
         int n = a.length;
         for (int i = 0; i < n; i++) {
             int r = i+ (int) (Math.random() * (n-i));   // between i and n-1
-           //int r =  (int) (Math.random() * (n));
+           //int r =  (int) (Math.random() * (n));      // This is wrong!!!
             exch(a, i, r);
         }
     }
