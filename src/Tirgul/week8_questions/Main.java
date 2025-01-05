@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Example example = new Example();
+        System.out.println(example);
         if (args.length > 0) {
             String filePath = args[0];
             File file = new File(filePath);

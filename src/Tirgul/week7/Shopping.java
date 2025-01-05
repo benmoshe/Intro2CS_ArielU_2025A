@@ -63,4 +63,5 @@ public class Shopping {
     public String display() {
         return ("the date is: " + dateOfShopping + ". the price is: " + price + ". the shop name is: " + shopName);
     }
+
 }

@@ -11,7 +11,7 @@ public class Student {
     private static int numOfStudents = 0;
 
     /**
-     * Constructs a new Student.
+     * Constructs a new Tirgul.Student.
      *
      * @param address The address of the student.
      * @param MolecularBiologyGrade The grade of the student in Molecular Biology.
@@ -34,7 +34,7 @@ public class Student {
     }
 
     /**
-     * @return The number of Student objects that have been created.
+     * @return The number of Tirgul.Student objects that have been created.
      */
     public static int getNumOfStudents() {
         return numOfStudents;

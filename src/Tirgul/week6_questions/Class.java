@@ -27,8 +27,8 @@ public class Class {
 
     public static void main(String[] args) {
         System.out.println("Number of students: " + Student.getNumOfStudents());
-        Student student1 = new Student("Address 1", 85, "Student 1");
-        Student student2 = new Student("Address 2", 90, "Student 2");
+        Student student1 = new Student("Address 1", 85, "Tirgul.Student 1");
+        Student student2 = new Student("Address 2", 90, "Tirgul.Student 2");
         student1.displayInfo();
         student2.displayInfo();
         Class class1 = new Class(student2);
